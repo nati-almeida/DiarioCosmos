@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0b0d17">
+    <meta
+      name="description"
+      content="Explore a imagem astronômica do dia da NASA."
+    >
+    <title>Diário Cosmos | Imagem Astronômica do Dia</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true">✦</span>
+          <div>
+            <p class="brand-name">Diário Cosmos</p>
+            <p class="brand-caption">Uma janela para o universo</p>
+          </div>
+        </div>
+        <p class="header-note">NASA · Astronomy Picture of the Day</p>
+      </header>
+
+      <main>
+        <section class="intro" aria-labelledby="page-title">
+          <p class="eyebrow">O universo em foco</p>
+          <h1 id="page-title">Uma nova perspectiva do cosmos, todos os dias.</h1>
+          <p class="intro-copy">
+            Descubra a imagem astronômica do dia e explore os detalhes por trás de cada registro.
+          </p>
+
+          <form class="date-panel" id="apod-form">
+            <div class="date-field">
+              <label for="apod-date-picker">Escolha uma data</label>
+              <input
+                id="apod-date-picker"
+                name="date"
+                type="date"
+                max="2026-11-13"
+              >
+            </div>
+            <button class="submit-button" type="submit">Explorar imagem</button>
+          </form>
+
+          <output class="feedback feedback-loading" id="loading-message" hidden>
+            Carregando a imagem do universo…
+          </output>
+          <p class="feedback feedback-error" id="error-message" role="alert" hidden></p>
+        </section>
+
+        <article class="apod" id="apod-content" aria-labelledby="apod-title" hidden>
+          <header class="apod-heading">
+            <h2 id="apod-title">Imagem astronômica do dia</h2>
+            <time class="apod-date" id="apod-date"></time>
+          </header>
+          <figure class="media-frame" id="apod-media" aria-label="Mídia da imagem astronômica do dia">
+            <figcaption class="media-placeholder">A imagem ou o vídeo selecionado aparecerá aqui.</figcaption>
+          </figure>
+          <p class="explanation" id="apod-explanation"></p>
+        </article>
+      </main>
+
+      <footer class="site-footer">
+        Conteúdo astronômico fornecido pela NASA.
+      </footer>
+    </div>
+
+  </body>
+</html>
